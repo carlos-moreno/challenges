@@ -1,4 +1,4 @@
 # Challenges
 
-Repositório utilizado para guardar códigos utilizados em soluções de problemas aleatórios.
+Repositório usado para guardar códigos utilizados em soluções de problemas aleatórios.
 
