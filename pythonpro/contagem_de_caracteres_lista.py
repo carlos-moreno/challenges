@@ -39,12 +39,12 @@ def contar_caracteres(s):
     caracteres = sorted(set(s))
 
     for _ in caracteres:
-        print(f'{_}: {s.count(_)}')
+        print(f"{_}: {s.count(_)}")
 
 
-if __name__ == '__main__':
-    contar_caracteres('carlos')
+if __name__ == "__main__":
+    contar_caracteres("carlos")
     print()
-    contar_caracteres('banana')
+    contar_caracteres("banana")
     print()
-    contar_caracteres('aaaccbbffffff')
+    contar_caracteres("aaaccbbffffff")

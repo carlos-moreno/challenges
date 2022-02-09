@@ -4,47 +4,23 @@ def contar_caracteres(s):
     Ex.:
 
     >>> contar_caracteres('carlos')
-    a: 1
-    c: 1
-    l: 1
-    o: 1
-    r: 1
-    s: 1
+    {'a': 1, 'c': 1, 'l': 1, 'o': 1, 'r': 1, 's': 1}
     >>> contar_caracteres('banana')
-    a: 3
-    b: 1
-    n: 2
+    {'a': 3, 'b': 1, 'n': 2}
 
     :param s: string a ser contada
+    :return: dictionary
 
     """
+    resultado = {}
 
-    # # Solução apresentada no curso
-    # caracteres_ordenados = sorted(s)
-    #
-    # caracter_anterior = caracteres_ordenados[0]
-    # contagem = 1
-    #
-    # for caracter in caracteres_ordenados[1:]:
-    #     if caracter == caracter_anterior:
-    #         contagem += 1
-    #     else:
-    #         print(f'{caracter_anterior}: {contagem}')
-    #         caracter_anterior = caracter
-    #         contagem = 1
-    #
-    # print(f'{caracter_anterior}: {contagem}')
+    for caracter in s:
+        resultado[caracter] = resultado.get(caracter, 0) + 1
 
-    # Minha solução
-    caracteres = sorted(set(s))
-
-    for _ in caracteres:
-        print(f'{_}: {s.count(_)}')
+    return dict(sorted(resultado.items(), key=lambda kv: kv[0]))
 
 
-if __name__ == '__main__':
-    contar_caracteres('carlos')
-    print()
-    contar_caracteres('banana')
-    print()
-    contar_caracteres('aaaccbbffffff')
+if __name__ == "__main__":
+    print(contar_caracteres("carlos"))
+    print(contar_caracteres("banana"))
+    print(contar_caracteres("aaaccbbffffff"))
